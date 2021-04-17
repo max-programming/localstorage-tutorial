@@ -10,10 +10,30 @@ main {
   margin: 15px auto 0;
 }
 
+#studentForm input[name="name"] {
+  grid-area: name;
+}
+
+#studentForm input[name="age"] {
+  grid-area: age;
+}
+
+#studentForm input[name="roll"] {
+  grid-area: roll;
+}
+
+#studentForm button {
+  grid-area: button;
+}
+
 #studentForm {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "name name"
+    "age roll"
+    "button button";
 }
 
 #studentForm * {

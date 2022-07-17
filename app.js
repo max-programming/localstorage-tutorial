@@ -73,7 +73,9 @@ studentForm.onsubmit = e => {
   );
 
   createStudentElement(newStudent);
-  confetti();
+  confetti({
+    particleCount: 150,
+  });
 
   nameInput.value = '';
   ageInput.value = '';

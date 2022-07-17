@@ -52,7 +52,7 @@ const createStudentElement = ({ id, name, age, roll }) => {
   // Add to the DOM
   btnsDiv.append(editButton);
   studentDiv.append(studentName, studentAge, studentRoll, btnsDiv);
-  studentsContainer.appendChild(studentDiv);
+  studentsContainer.prepend(studentDiv);
 
   studentsContainer.style.display = students.length === 0 ? 'none' : 'flex';
 };

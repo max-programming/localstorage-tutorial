@@ -1,3 +1,5 @@
+import confetti from 'https://cdn.skypack.dev/canvas-confetti';
+
 // DOM Elements
 const studentForm = document.getElementById('studentForm');
 const studentsContainer = document.querySelector('.students');
@@ -71,6 +73,7 @@ studentForm.onsubmit = e => {
   );
 
   createStudentElement(newStudent);
+  confetti();
 
   nameInput.value = '';
   ageInput.value = '';

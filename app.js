@@ -18,7 +18,9 @@ const EDIT_ICON = `<svg class="btn-icon" fill="none" stroke="currentColor" viewB
 const students = JSON.parse(localStorage.getItem('students')) || [];
 
 const addStudent = (name, age, roll) => {
+  const id = Math.floor(Math.random() * 19999);
   students.push({
+    id,
     name,
     age,
     roll,
@@ -26,10 +28,10 @@ const addStudent = (name, age, roll) => {
 
   localStorage.setItem('students', JSON.stringify(students));
 
-  return { name, age, roll };
+  return { id, name, age, roll };
 };
 
-const createStudentElement = ({ name, age, roll }) => {
+const createStudentElement = ({ id, name, age, roll }) => {
   // Create elements
   const studentDiv = document.createElement('div');
   const studentName = document.createElement('h2');
@@ -40,6 +42,7 @@ const createStudentElement = ({ name, age, roll }) => {
 
   btnsDiv.className = 'btns-div';
   editButton.className = 'edit-btn';
+  editButton.onclick = () => (location.href = `/edit.html?id=${id}`);
   // Fill the content
   studentName.innerText = 'Student name: ' + name;
   studentAge.innerText = 'Student age: ' + age;

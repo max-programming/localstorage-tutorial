@@ -10,23 +10,23 @@ main {
   margin: 15px auto 0;
 }
 
-#studentForm input[name="name"] {
+.studentForm input[name="name"] {
   grid-area: name;
 }
 
-#studentForm input[name="age"] {
+.studentForm input[name="age"] {
   grid-area: age;
 }
 
-#studentForm input[name="roll"] {
+.studentForm input[name="roll"] {
   grid-area: roll;
 }
 
-#studentForm button {
+.studentForm button {
   grid-area: button;
 }
 
-#studentForm {
+.studentForm {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
@@ -36,7 +36,7 @@ main {
     "button button";
 }
 
-#studentForm * {
+.studentForm * {
   margin: 7px;
   padding: 7px;
   font-size: 1.1rem;
@@ -44,7 +44,7 @@ main {
   transition: all 0.3s ease;
 }
 
-#studentForm button {
+.studentForm button {
   outline: none;
   background-color: #6495ed;
   color: white;
@@ -52,16 +52,16 @@ main {
   cursor: pointer;
 }
 
-#studentForm input {
+.studentForm input {
   border: 3px solid #6495ed;
   outline: none;
 }
 
-#studentForm input:focus {
+.studentForm input:focus {
   border: 3px solid #367bfa;
 }
 
-#studentForm button:active {
+.studentForm button:active {
   border-color: #367bfa;
 }
 

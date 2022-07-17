@@ -85,3 +85,30 @@ main {
 .students div * {
   margin: 5px;
 }
+
+.btns-div {
+  display: grid;
+  place-items: center;
+  gap: 5;
+}
+
+.edit-btn {
+  border-radius: 50%;
+  border: none;
+  background-color: #3E78B2;
+  color: white;
+  padding: 5px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.edit-btn:hover {
+  background-color: #004BA8;
+}
+
+.btns-div .btn-icon {
+  width: 20px;
+  height: 20px;
+}

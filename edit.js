@@ -1,5 +1,8 @@
 const editStudentForm = document.getElementById('editStudentForm');
 const params = location.href.split('?')[1];
+
+if (!params) location.href = '/';
+
 const studentId = params.split('=')[1];
 const nameInput = editStudentForm['name'];
 const ageInput = editStudentForm['age'];

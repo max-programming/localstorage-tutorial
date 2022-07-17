@@ -16,9 +16,7 @@ const replaceStudent = updatedStudent => {
 
 const getStudents = () => {
   const students = JSON.parse(localStorage.getItem('students'));
-  const currentStudent = students.find(
-    student => student.id.toString() === studentId
-  );
+  const currentStudent = students.find(student => student.id === studentId);
   const currentStudentIndex = students.indexOf(currentStudent);
   return {
     students,

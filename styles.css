@@ -10,15 +10,15 @@ main {
   margin: 15px auto 0;
 }
 
-.studentForm input[name="name"] {
+.studentForm input[name='name'] {
   grid-area: name;
 }
 
-.studentForm input[name="age"] {
+.studentForm input[name='age'] {
   grid-area: age;
 }
 
-.studentForm input[name="roll"] {
+.studentForm input[name='roll'] {
   grid-area: roll;
 }
 
@@ -31,9 +31,9 @@ main {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   grid-template-areas:
-    "name name"
-    "age roll"
-    "button button";
+    'name name'
+    'age roll'
+    'button button';
 }
 
 .studentForm * {
@@ -87,15 +87,14 @@ main {
 }
 
 .btns-div {
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
   gap: 5;
 }
 
-.edit-btn {
+.btns-div button {
   border-radius: 50%;
   border: none;
-  background-color: #3E78B2;
   color: white;
   padding: 5px;
   display: grid;
@@ -104,8 +103,20 @@ main {
   transition: background-color 0.3s ease-in-out;
 }
 
+.edit-btn {
+  background-color: #3e78b2;
+}
+
+.delete-btn {
+  background-color: #eb4747;
+}
+
 .edit-btn:hover {
-  background-color: #004BA8;
+  background-color: #004ba8;
+}
+
+.delete-btn:hover {
+  background-color: #eb1d36;
 }
 
 .btns-div .btn-icon {
